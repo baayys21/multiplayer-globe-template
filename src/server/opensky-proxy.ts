@@ -10,11 +10,12 @@ const nodeFetch = require('node-fetch');
 const cors = require('cors');
 
 const app = express();
+// @ts-ignore
 const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 
-app.get('/api/opensky', async (req, res) => {
+app.get('/api/opensky', async (req: any, res: any) => {
   try {
     const response = await nodeFetch('https://opensky-network.org/api/states/all');
     const data = await response.json();

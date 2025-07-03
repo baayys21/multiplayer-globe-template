@@ -84,8 +84,8 @@ function App() {
     let interval: ReturnType<typeof setInterval>;
     const fetchPlanes = async () => {
       try {
-        const res = await fetch("https://opensky-network.org/api/states/all");
-        const data = await res.json();
+        const res = await fetch("http://localhost:4000/api/opensky");
+        const data: { states: any[] } = await res.json();
         if (data && data.states) {
           // Ambil 20 pesawat acak untuk visualisasi
           const randomPlanes = data.states

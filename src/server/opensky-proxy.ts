@@ -2,18 +2,21 @@
 // npm install express node-fetch cors
 // npm install --save-dev @types/express @types/cors @types/node
 
-import express, { Request, Response } from 'express';
-import fetch from 'node-fetch';
-import cors from 'cors';
+// @ts-ignore
+const express = require('express');
+// @ts-ignore
+const nodeFetch = require('node-fetch');
+// @ts-ignore
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 
-app.get('/api/opensky', async (req: Request, res: Response) => {
+app.get('/api/opensky', async (req, res) => {
   try {
-    const response = await fetch('https://opensky-network.org/api/states/all');
+    const response = await nodeFetch('https://opensky-network.org/api/states/all');
     const data = await response.json();
     res.json(data);
   } catch (err) {

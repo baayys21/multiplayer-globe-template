@@ -8,7 +8,9 @@
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true,
+    "types": ["node"]
   },
-  "include": ["src/shared.ts"]
+  "include": ["src/**/*"]
 }

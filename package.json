@@ -38,6 +38,7 @@
     "cf-typegen": "wrangler types ./src/server/worker-configuration.d.ts",
     "check": "tsc --project src/client && tsc --project src/server && wrangler deploy --dry-run",
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
+    "dev": "nodemon src/server/index.ts",
+    "start": "ts-node src/server/index.ts"
   }
 }

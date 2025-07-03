@@ -2,6 +2,7 @@ import { routePartykitRequest, Server } from "partyserver";
 
 import type { OutgoingMessage, Position } from "../shared";
 import type { Connection, ConnectionContext } from "partyserver";
+import './opensky-proxy';
 
 // This is the state that we'll store on each connection
 type ConnectionState = {

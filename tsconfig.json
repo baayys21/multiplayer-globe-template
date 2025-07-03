@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": ["esnext", "dom"],
+    "lib": ["esnext"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
@@ -10,8 +10,7 @@
     "skipLibCheck": true,
     "strict": true,
     "esModuleInterop": true,
-    "types": ["node"],
-    "jsx": "react-jsx"
+    "types": ["node"]
   },
   "include": ["src/**/*"]
 }
